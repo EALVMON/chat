@@ -1,0 +1,51 @@
+{
+  "usuario_propietario": "Ryan",
+  "chats": [
+    {
+      "contacto": "Kelly",
+      "mensajes": [
+        {
+          "emisor": "Ryan",
+          "contenido": "Hola Kelly, ¿viste el correo que te envié?",
+          "timestamp": "2023-10-05T09:00:00Z",
+          "estado": "entregado"
+        },
+        {
+          "emisor": "Kelly",
+          "contenido": "Sí, lo acabo de ver. ¿Necesitas algo más?",
+          "timestamp": "2023-10-05T09:05:00Z",
+          "estado": "leido"
+        },
+        {
+          "emisor": "Ryan",
+          "contenido": "Solo quería asegurarme de que lo revisaras. Gracias.",
+          "timestamp": "2023-10-05T09:10:00Z",
+          "estado": "entregado"
+        }
+      ]
+    },
+    {
+      "contacto": "Dwight",
+      "mensajes": [
+        {
+          "emisor": "Ryan",
+          "contenido": "Dwight, ¿tienes el informe de ventas?",
+          "timestamp": "2023-10-05T09:15:00Z",
+          "estado": "entregado"
+        },
+        {
+          "emisor": "Dwight",
+          "contenido": "Sí, lo tengo. ¿Necesitas algo específico?",
+          "timestamp": "2023-10-05T09:20:00Z",
+          "estado": "leido"
+        },
+        {
+          "emisor": "Ryan",
+          "contenido": "Solo envíamelo cuando puedas, por favor.",
+          "timestamp": "2023-10-05T09:25:00Z",
+          "estado": "entregado"
+        }
+      ]
+    }
+  ]
+}

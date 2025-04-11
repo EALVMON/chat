@@ -1,0 +1,40 @@
+/* Estilo para el Dropdown */
+#basic-nav-dropdown {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Animación suave */
+  }
+  
+  /* Estilo para los elementos del Dropdown */
+  #basic-nav-dropdown .dropdown-item {
+    color: #333; /* Color del texto */
+    font-size: 1rem; /* Tamaño de fuente */
+    padding: 12px 20px; /* Espaciado dentro de los elementos */
+    transition: background-color 0.3s ease; /* Animación para el cambio de fondo */
+  }
+  
+  /* Cambiar color de fondo al pasar el mouse */
+  #basic-nav-dropdown .dropdown-item:hover {
+    background-color: #007bff; /* Fondo azul al hacer hover */
+    color: white; /* Cambiar texto a blanco */
+    cursor: pointer; /* Cambiar el cursor a mano */
+  }
+  
+  /* Añadir efecto al hacer hover sobre el Dropdown completo */
+  #basic-nav-dropdown:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Aumentar sombra al hacer hover */
+    transform: translateY(-3px); /* Levantar el dropdown ligeramente */
+  }
+  
+  /* Estilo para el título del Dropdown */
+  #basic-nav-dropdown .dropdown-toggle {
+    color: #007bff; /* Color azul para el título */
+    font-weight: bold; /* Hacer el título en negrita */
+  }
+  
+  /* Estilo de fondo de Navbar */
+  .navbar {
+    background-color: #f8f9fa; /* Fondo suave para la barra de navegación */
+  }
+  
