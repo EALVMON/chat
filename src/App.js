@@ -1,6 +1,5 @@
 import { BrowserRouter } from 'react-router-dom'; // Importa BrowserRouter
 import { Route, Routes } from 'react-router-dom'; // Rutas y componentes de ruta
-import ChatList from './componentes/ChatList';
 import Contacto from './componentes/Contacto'; // Componente para mostrar la conversación de un contacto
 import NavigationBar from './componentes/NavigationBar'; // Barra de navegación
 import { MessProvider } from './componentes/MessContext';
