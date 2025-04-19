@@ -1,3 +1,4 @@
+import React from 'react'; 
 import { useParams } from 'react-router-dom'; // Para acceder a los parámetros de la URL
 import { useMessContext } from './MessContext'; // Acceder al contexto
 import { Container, Card, Table } from 'react-bootstrap';
@@ -12,6 +13,9 @@ const Contacto = () => {
   if (!chat) {
     return <div>Contacto no encontrado</div>; // Mensaje en caso de no encontrar el contacto
   }
+
+  // Ordenar los mensajes por fecha
+  const mensajesOrdenados = chat.mensajes.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
 
   return (
     <Container className="mt-4">
@@ -28,13 +32,23 @@ const Contacto = () => {
               </tr>
             </thead>
             <tbody>
-              {chat.mensajes.map((mensaje, mensajeIndex) => (
-                <tr key={mensajeIndex}>
-                  <td>{mensaje.emisor}</td>
-                  <td>{mensaje.contenido}</td>
-                  <td>{new Date(mensaje.timestamp).toLocaleString()}</td>
-                  <td>{mensaje.estado}</td>
-                </tr>
+              {mensajesOrdenados.map((mensaje, mensajeIndex) => (
+                <React.Fragment key={mensajeIndex}>
+                  <tr>
+                    <td>{mensaje.emisor}</td>
+                    <td>{mensaje.contenido}</td>
+                    <td>{new Date(mensaje.timestamp).toLocaleString()}</td>
+                    <td>{mensaje.estado}</td>
+                  </tr>
+                  {/* Línea discontinua entre los mensajes */}
+                  {mensajeIndex < mensajesOrdenados.length - 1 && (
+                    <tr>
+                      <td colSpan="4">
+                        <div style={{ borderTop: '2px dashed #ccc', margin: '10px 0' }}></div>
+                      </td>
+                    </tr>
+                  )}
+                </React.Fragment>
               ))}
             </tbody>
           </Table>
@@ -45,4 +59,3 @@ const Contacto = () => {
 }
 
 export default Contacto;
-// Este componente muestra la conversación con un contacto específico.  
