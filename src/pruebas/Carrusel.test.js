@@ -80,6 +80,7 @@ test('no renderiza nada si no hay mensajes', () => {
   );
 
   expect(screen.queryByText(/Mensajes de/)).not.toBeInTheDocument();
+ 
 });
 
 test('omite mensaje si no encuentra el chat correspondiente', () => {
